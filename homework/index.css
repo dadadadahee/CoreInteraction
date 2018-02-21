@@ -18,16 +18,21 @@ html,body {
 
 .columnscontainer, header { position: relative; margin: 10px; }
 
-.leftcolumn, .rightcolumn, header {  
-	padding: 10px; width: 45%;
+.leftcolumn, .rightcolumn, header {
+	float:left;
+	padding: 10px; width: 50%;
 }
+
 
 .leftcolumn { margin-bottom: 10px;}
 
 
-center {
+.center {
 	font-size: 40px;
 	font-family: 'Cabin Sketch', cursive;
+	margin: auto;
+    width: 50%;
+    text-align: center;
 }
 
 h1 {
@@ -61,6 +66,7 @@ ul {
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 2;
 }
 
 nav li a {
@@ -113,14 +119,13 @@ footer {
 	font-family: 'Dosis', sans-serif;
 	font-size: 15px;
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
+	margin: auto;
+    width: 50%;
 }
 
 
 
-
-@media screen and (min-width: 600px ) {
-  .leftcolumn { margin-right: 20px; }
-
-	.rightcolumn { position: absolute; top: 0; right: 0; width: 40%; }   
+@media screen and (max-width: 600px ) {
+	.leftcolumn, .rightcolumn{ float:none; width: 90%; }
 }
