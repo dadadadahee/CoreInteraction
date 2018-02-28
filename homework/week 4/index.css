@@ -125,7 +125,6 @@ footer {
 }
 
 
-
 @media screen and (max-width: 600px ) {
 	.leftcolumn, .rightcolumn{ float:none; width: 90%; }
 }
