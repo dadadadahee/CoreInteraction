@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+	position: absolute;
+}
+</style>
+</head>
+<body>
+</body>
+<script>
+
+var counter = 0;
+while(counter < 10000){
+	var d = document.createElement("div");
+
+	var red = parseInt(Math.random()*256);
+	var green = parseInt(Math.random()*256);
+	var blue = parseInt(Math.random()*256);
+	//           rgb(255, 0, 0)
+	// var color = "rgb(255, 200, 150)";
+
+	var color = "rgb("+red+", "+green+", "+blue+")";
+
+	// console.log(color);
+	d.style.backgroundColor = color;
+	d.style.width = (Math.random()*100) + 'px';
+	d.style.height = (Math.random()*100) + 'px';					
+	d.style.top = (Math.random()*600) + 'px';						
+	d.style.right = (Math.random()*2560) + 'px';
+
+	document.body.appendChild(d);
+	counter = counter + 1;
+}
+
+</script>
+</html>
+
