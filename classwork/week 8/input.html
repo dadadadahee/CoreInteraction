@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<input type="text" id="textfield">
+	<button id ="okaybutton">Okay</button>
+	<h1 id="header"></h1>
+<script type="text/javascript">
+document.getElementById("okaybutton").onclick = function(){
+	var text = document.getElementById("textfield").value;
+	console.log(text);
+	document.getElementById("header").innerHTML = text;
+}
+</script>
+</body>
+</html>

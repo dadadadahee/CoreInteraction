@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var weather = {
+		"temperature" : 48.15,
+		"chanceofrain" : .1,
+		"humidity" :.5
+	}
+
+	console.log(weather);
+	console.log(weather["temperature"])
+
+	var doublearray = [
+		["apple", "pear"],
+		["strawberry", "blueberry"],
+		["potato", "leek"]
+	]
+
+	//trying to get blueberry
+	console.log(doublearray[1][1])
+	//first bracket got us the array, second bracket got us blueberry from the array 
+
+	var innerArray = doublearray[1];
+	console.log(innerArray[1]);
+	//same thing as the 위에있는거 
+
+
+	//putting objects inside the object
+	//inside of object, order does not matter 
+
+	var classmates = {
+		"Dahee" : {
+			"breakfast" : "french toast",
+			"animal" : "goat"
+		}, //put da comma 
+		"Alessio" : {
+			"breakfast" : "juice",
+			"animal" : "squirrel"
+		},
+		"Sejung" : {
+			"breakfast" : "bagel",
+			"animal" : "fox"
+		}
+	}
+
+	console.log(classmates);
+	console.log(classmates["Dahee"]["animal"])
+</script>
+</body>
+</html>
