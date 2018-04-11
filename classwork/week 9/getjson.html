@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script></head>
+<body>
+<script>
+	
+	var url = "https://api.citybik.es/v2/networks/citi-bike-nyc";
+	var myLat = 40.7369995;
+	var myLon = -73.9944154;
+	//$.getJSON( url, function(){});
+	$.getJSON( url, function(data){
+		//console.log(data);
+		//var stations = data.network.stations;
+
+		var stations = data.network.stations.sort(function(a,b){
+			var LatA = Math.abs (a.latitude - myLat);
+			var LonA = Math.abs (a.longitude - myLon);
+
+			var LatB = Math.abs (b.latitude - myLat);
+			var LonB = Math.abs (b.longitude - myLon);
+
+			return (LatA + LonA) - (LatB + LonB);
+			//Math.abs = making it absolute number
+		});
+
+		//console.log(stations);
+
+		//var i = 0;
+		//while(i < 809){
+		//	i = i + 1;
+		//}
+
+		//console.log(stations.length); -> how many datas there are. citybike is expanding so instead of putting a nnumber, we put in this variable.
+
+		for(var i = 0; i < stations.length; i = i+1){
+			//console.log(stations[i].name);
+			var p = document.createElement("p");
+			//p.innerHTML = stations[i].name;
+			//how many bikes theree are, the station's name 
+			p.innerHTML = stations[i].free_bikes + " : " + stations[i].name;
+
+			document.body.appendChild(p);
+		}
+	});
+</script>
+</body>
+</html>
