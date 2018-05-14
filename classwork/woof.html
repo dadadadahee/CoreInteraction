@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+</head>
+	<style>
+		div {
+			position: absolute;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	$.getJSON("https://raw.githubusercontent.com/robbykraft/CoreInteraction/master/divs.json", function(data){
+		for(var i = 0; i < data.length; i = i + 1){
+			var div = document.createElement("div");
+			div.style.top = data[i].top + "px";
+			div.style.left = data[i].left + "px";
+			div.style.width = data[i].width + "px";
+			div.style.height = data[i].height + "px";
+			document.body.appendChild(div);
+
+		}
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="cleave.min.js"></script>
+	<style>
+	html, body {
+		text-align: center;
+	    font-family: 'Roboto', sans-serif;
+	    height: 100%;
+	    margin: 0;
+ 	    color: pink;
+	}
+	</style>
+
+</head>
+<body>
+	<div>
+		<input class="input-element" placeholder="YYYY/MM/DD" type="tel">
+	</div>
+<script>
+	var cleave = new Cleave('.input-element', {
+    date: true,
+    datePattern: ['Y', 'm', 'd']
+	});
+	
+</script>
+</body>
+</html>
